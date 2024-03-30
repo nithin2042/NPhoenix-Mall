@@ -1,0 +1,239 @@
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+	text-decoration: none;
+}
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+}
+section 
+{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+section::before 
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#000,#0f0,#000);
+	animation: animate 5s linear infinite;
+} 
+@keyframes animate 
+{
+	0%
+	{
+		transform: translateY(-100%);
+	}
+	100%
+	{
+		transform: translateY(100%);
+	}
+}
+section span 
+{
+	position: relative;
+	display: block;
+	width: calc(6.25vw - 2px);
+	height: calc(6.25vw - 2px);
+	background: #181818;
+	z-index: 2;
+	transition: 1.5s;
+}
+section span:hover 
+{
+	background: #0f0;
+	transition: 0s;
+}
+
+section .signin
+{
+	position: absolute;
+	width: 50%;
+  background: #222;  
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+section .signin .content 
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 4px;
+}
+section .signin .content h1 
+{
+	font-size: 2em;
+	color: #0f0;
+	text-transform: uppercase;
+}
+section .signin .content h4
+{
+	font-size: 0.5em;
+	color: #0f0;
+	text-transform: uppercase;
+}
+section .signin .content .form 
+{
+	width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.signin .content
+{
+	position: relative;
+	display: flex;
+}
+.signin .content .form{
+    display: inline-flex;
+}
+.signin .content a .urlbox
+{
+	position: relative;
+    top: 50%;
+    left:50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size:x-large;
+	text-transform: uppercase;
+    text-overflow: ellipsis;
+}
+.signin .content .form a 
+{
+	color: rgb(118, 254, 0);
+	text-decoration: none;
+    font-weight:bold;
+	width: 20vw;
+    height: 20vh;
+    border: 2px solid #0f0;
+	background: #181818;
+    margin: 15px;
+    transition:1.5s;
+    box-shadow: 0px 1px 5px gray;
+    border-radius: 5px;
+}
+
+.signin .content a:hover
+{
+    background-color: #0f0;
+    color:white;
+    border: none;
+    box-shadow: 0px 0px 10px #0f0, 0px 0px 130px #0f0, 0px 0px 170px #0f0, 0px 0px 300px #0f0;
+    transition: 0s;
+    text-shadow: 2px 1px cyan;
+}
+.signin .content a:hover  .fa{
+	font-size: 6em;
+	transform: translate(-65%, -65%);
+	transition:0.5s;
+}
+.fa{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	z-index: -1;
+}
+.in-ops{
+	z-index: 2;
+	position:absolute;
+	left: 80vw;
+	top:10vh;
+	cursor: pointer;
+  }
+  .in-ops img{
+	width: 8vh;
+	height: 8vh;
+	border-radius: 50%;
+	border:3px solid #0f0;
+	background-color: #222;
+  }
+  .in-ops strong{
+	color: #0f0;
+	position:relative;
+	top: -3vh;
+	left:2px;
+	font-size: larger;
+  }
+  a.tops button{
+	text-transform:uppercase;
+	border:2px solid #0f0;
+	color:#0f0;
+	padding: 5px;
+	background-color: #000;
+	transition: 1.5s;
+	font-size: 22px;
+	min-width: 8vw;
+  }
+  a.tops button i{
+	z-index: 3;
+	visibility: hidden;
+  }
+  a.tops button:hover{
+	border:2px solid #fff;
+	color:rgb(255, 255, 255);
+	background-color: #0f0;
+	transition: 0.5s;
+    box-shadow: 0px 0px 10px #0f0, 0px 0px 130px #0f0, 0px 0px 170px #0f0, 0px 0px 300px #0f0;
+  }
+  a.tops button.btn-left:hover  .fa{
+	transform: translate(-8vw, 4.5vh);
+	visibility: visible;
+	transition: 1.5s;
+	font-size: 1vw;
+	color: #fff;
+  }
+  a.tops button.btn-right:hover  .fa{
+	transform: translate(0px , 4.5vh);
+	visibility: visible;
+	transition: 1.5s;
+	font-size: 1vw;
+	color: #fff;
+  }
+
+
+@media (max-width: 900px)
+{
+	section span 
+	{
+		width: calc(10vw - 2px);
+		height: calc(10vw - 2px);
+	}
+}
+@media (max-width: 600px)
+{
+	section span 
+	{
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}
